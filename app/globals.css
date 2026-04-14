@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Leaflet map styles — required for react-leaflet */
+@import 'leaflet/dist/leaflet.css';
+
+@layer base {
+  :root {
+    --color-primary: #185FA5;
+    --color-green: #3B6D11;
+    --color-amber: #854F0B;
+    --color-purple: #534AB7;
+    --color-teal: #0F6E56;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply bg-white rounded-xl border border-gray-100 p-4;
+  }
+  .pill {
+    @apply text-xs font-medium px-2.5 py-0.5 rounded-full;
+  }
+  .pill-blue { @apply bg-blue-50 text-blue-800; }
+  .pill-green { @apply bg-green-50 text-green-800; }
+  .pill-amber { @apply bg-amber-50 text-amber-800; }
+  .pill-purple { @apply bg-purple-50 text-purple-800; }
+
+  .btn-primary {
+    @apply bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors;
+  }
+  .btn-outline {
+    @apply border border-gray-200 text-gray-600 text-sm px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 p-4;
+  }
+}
